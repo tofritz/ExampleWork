@@ -52,8 +52,11 @@ print(wordWithDashes(15))  # "bottommost"
 
 
 def balanced():
+    equal = []
     for (word, morse) in wordsDict.items():
-        print(word)
-
+        dots = morse.count('.')
+        dash = morse.count('-')
+        
+    print(equal)
 
 print(balanced())
