@@ -1,5 +1,5 @@
 from string import ascii_lowercase
-import timeit
+import time
 
 morse_alphabet = ".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..".split()
 morse_to_char = dict(zip(morse_alphabet, ascii_lowercase))
@@ -36,4 +36,12 @@ def challenge():
     check('.--...-.-.-.....-.--........----.-.-..---.---.--.--.-.-....-..-...-.---..--.----..')
     return print('Challenge Passed!')
 
+def challenge2():
+    start = time.time()
+    with open('inputs.txt', 'r') as input:
+        check(smorse.rstrip() for smorse in input.readlines())
+    end = time.time()
+    print(f'Optional bonus 1 complete! Time elapsed: {end - start:0.2f} seconds.')
+
 challenge()
+challenge2()
