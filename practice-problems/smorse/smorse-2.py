@@ -41,7 +41,7 @@ def get_letter(seq):
 
 # print(smalpha_2(test))
 
-# count frequency of morse in smorse, replace low > high freq.
+# count frequency of morse in smorse, replace low -> high freq.
 
 morseFreq = {morse: 0 for morse in morseDict.keys()}  # counter
 
